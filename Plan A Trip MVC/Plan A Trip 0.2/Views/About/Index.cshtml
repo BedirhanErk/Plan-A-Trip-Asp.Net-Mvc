@@ -1,0 +1,20 @@
+﻿@using Plan_A_Trip.Models.Classes
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @foreach (var x in Model)
+            {
+                <img src="@x.PictureUrl" alt="" />
+                <p>@x.Explanation</p>
+            }
+        </div>
+    </div>
+</div>    

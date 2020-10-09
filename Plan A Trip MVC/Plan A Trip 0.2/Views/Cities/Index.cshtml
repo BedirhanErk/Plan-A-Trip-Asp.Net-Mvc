@@ -1,0 +1,75 @@
+﻿@model Plan_A_Trip.Models.Classes.BlogComment
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Plan A Trip</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="content-grids">
+                <div class="col-md-8 content-main">
+                    @foreach (var x in Model.Value5)
+                    {
+
+                        <div class="single-grid">
+                            <img src="@x.CityImage" alt="" style="margin-bottom:20px" />
+                            <a href="/Cities/CityDetails/@x.Id">@x.Title</a>
+                            <p>@x.Explanation.Substring(0, 250)</p>
+
+                            <br /><br />
+                        </div>
+                    }
+                </div>
+                <div class="col-md-4 content-right">
+                    <div class="recent">
+                        <h3>MOST POPULAR CITIES</h3>
+                        <ul>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/53">İstanbul</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/84">Ankara</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/83">Antalya</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/52">İzmir</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/50">Nevşehir</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/90">Muğla</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/68">Edirne</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/82">Artvin</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/89">Adana</a></li>
+                            <li><a href="https://localhost:44369/Cities/CityDetails/49">Trabzon</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

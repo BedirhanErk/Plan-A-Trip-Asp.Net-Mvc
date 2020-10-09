@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>User Login Form</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="~/Login2/css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+    <section class="w3l-login">
+        <div class="overlay">
+            <div class="wrapper">
+                <div class="logo">
+                    <a class="brand-logo" href="~/Login2/index.html">User Login Form</a>
+                </div>
+                <div class="form-section">
+                    <h3>Login</h3>
+                    <h6>To Continue With Us</h6>
+                    @using (Html.BeginForm("Login2", "SignUp", FormMethod.Post))
+                    {
+                        <form action="#" method="post" class="signin-form">
+                            <div class="form-input">
+                                <input type="text" name="Email" placeholder="Email" required="" autofocus>
+                            </div>
+                            <div class="form-input">
+                                <input type="password" name="Password" placeholder="Password" required="">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary theme-button mt-4">Login</button>
+                            <div class="new-signup">
+                                <a href="/User/ForgotPassword" class="signuplink">Forgot password?</a>
+                            </div>
+                        </form>
+                    }
+                    <p class="signup">Don’t have account yet? <a href="/SignUp/SignUp" class="signuplink">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div class="copy-right">
+            <p>&copy; 2020 User Login Form. All rights reserved | Design by <a href="https://www.bedirhanerkilic.com/" target="_blank">Bedirhan Erkılıç</a></p>
+        </div>
+
+    </section>
+</body>
+
+</html>

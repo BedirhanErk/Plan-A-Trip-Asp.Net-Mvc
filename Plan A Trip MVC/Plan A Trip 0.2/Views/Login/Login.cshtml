@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Admin Login Form</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="~/Login Form/css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <section class="w3l-login-form">
+        <div id="form-section">
+            <div class="wrapper">
+                <div class="logo">
+                    <a class="brand-logo" href="index.html">Admin Login Form</a>
+                </div>
+                <div class="login-form">
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                    {
+                        <div class="form-fields d-grid">
+                            <input type="text" name="UserName" placeholder="Username" required="" />
+                            <input type="password" name="Password" class="padding" placeholder="Password" required="" />
+                        </div>
+                        <button type="submit" >Login</button>
+                    }
+                </div>
+                <div class="copy-right">
+                    <p>&copy; 2020 Admin Login Form. All rights reserved | Design by <a href="https://www.bedirhanerkilic.com/" target="_blank">Bedirhan Erkılıç</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

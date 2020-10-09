@@ -1,0 +1,112 @@
+﻿@model Plan_A_Trip.Models.Classes.BlogComment
+@{
+    ViewBag.Title = "CityDetails";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Plan A Trip</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="content">
+        <div class="container">
+            <div class="content-grids">
+                <div class="col-md-8 content-main">
+                    <div class="single-grid">
+                        @foreach (var x in Model.Value5)
+                        {
+                            <img src="@x.CityImage" alt="" style="margin-bottom:20px" />
+                            <h2>@x.Title</h2>
+                            <p>
+                                @x.Explanation
+                            </p>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-4 content-right">
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/glass.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            @foreach (var x in Model.Value6)
+                            {
+                                <a href="/Cities/Restaurants/@x.Id"><p>Restaurants</p></a>
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/flight.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            @foreach (var x in Model.Value6)
+                            {
+                                <a href="@x.Flights"><p>Flights</p></a>
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/group.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            @foreach (var x in Model.Value6)
+                            {
+                                <a href="/Cities/ThingsToDo/@x.Id"><p>Things to do</p></a>
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/key.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            @foreach (var x in Model.Value6)
+                            {
+                                <a href="@x.VocationRents"><p>Vacation Rents</p></a>
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

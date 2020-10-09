@@ -1,0 +1,26 @@
+﻿@model Plan_A_Trip.Models.Classes.Comment_
+@{
+    ViewBag.Title = "BringComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Update Comment</h2>
+<br />
+
+@using (Html.BeginForm("UpdateComment", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.UserName)
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Comments)
+    @Html.TextAreaFor(x => x.Comments, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update Comments</button>
+}

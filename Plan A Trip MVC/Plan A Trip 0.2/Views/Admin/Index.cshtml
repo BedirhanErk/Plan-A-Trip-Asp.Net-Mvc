@@ -1,0 +1,28 @@
+﻿@using Plan_A_Trip.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Blog List</h2>
+<br />
+<a href="/Admin/Add/" class="btn btn-primary" style="margin-bottom:15px">Add Blogs</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Delete</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td><a href="/Admin/Delete/@x.Id" class="text-danger" data-toggle="tooltip" data-placement="top" title="Delete"><strong>X</strong></a></td>
+            <td><a href="/Admin/Update/@x.Id" class="">@x.Title</a></td>
+            <td><a href="/Admin/Update/@x.Id" class="">@x.Date.ToString("dd/MM/yyyy")</a></td>
+            <td><a href="/Admin/Details/@x.Id" class="btn btn-info">Details</a></td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,25 @@
+﻿@model Plan_A_Trip.Models.Classes.Blog
+@{
+    ViewBag.Title = "AddBlog";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>Add Blog</h2>
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Date)
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Explanation)
+    @Html.TextAreaFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Add Blog</button>
+</form>

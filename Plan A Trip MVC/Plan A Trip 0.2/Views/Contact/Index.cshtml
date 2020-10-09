@@ -1,0 +1,86 @@
+﻿@model Plan_A_Trip.Models.Classes.Contact
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/web3/css/style.css">
+</head>
+
+<body>
+    <section class="w3l-contact-5">
+        <div class="contact-top section-gap">
+            <div class="wrapper">
+                <div class="d-grid cont-main-top">
+                    <div class="contacts12-main">
+                        <h3 class="title-main-cont">Contact Form</h3>
+                        <p class="sub-title-cont">
+                            You can contact me using the form below.
+                        </p>
+                        <form class="main-input" method="post">
+                            <div style="margin-bottom:20px">
+                                <div style="margin-bottom:10px">
+                                    @Html.LabelFor(x => x.NameSurname)
+                                </div>
+                                @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <div style="margin-bottom:10px">
+                                    @Html.LabelFor(x => x.Email)
+                                </div>
+                                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <div style="margin-bottom:10px">
+                                    @Html.LabelFor(x => x.Subject)
+                                </div>
+                                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <div style="margin-bottom:10px">
+                                    @Html.LabelFor(x => x.Message)
+                                </div>
+                                @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @style = "height:200px" })
+                            </div>
+                            <div class="text-right">
+                                <button class="read" style="height:50px; width:150px;">Sumbit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact">
+                        <div class="cont-subs">
+                            <div class="cont-add">
+                                <h4>Address:</h4>
+                                <p class="contact-text-sub">Yukarı Çatak Mahallesi Ümit1. Sokak No:13/3 Yozgat/Merkez</p>
+                            </div>
+                            <div class="cont-add">
+                                <h4>Email:</h4>
+                                <a href="erkilicbedirhan@gmail.com">
+                                    erkilicbedirhan@gmail.com
+                                </a>
+                            </div>
+                            <div class="cont-add">
+                                <h4>Phone:</h4>
+                                <a href="tel:0539 899 55 45">
+                                    0539 899 55 45
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1GzjgAz-p5w2GKhYma9qxCmeXDEUEqlhJ" width="640" height="480"></iframe>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

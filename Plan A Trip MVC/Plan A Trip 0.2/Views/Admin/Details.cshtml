@@ -1,0 +1,27 @@
+﻿@model Plan_A_Trip.Models.Classes.Blog
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Details Blog</h2>
+<br />
+
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(x => x.Id)</dt>
+    <dd>@Model.Id</dd>
+
+    <dt>@Html.DisplayNameFor(x => x.Title)</dt>
+    <dd>@Model.Title</dd>
+
+    <dt>@Html.DisplayNameFor(x => x.Date)</dt>
+    <dd>@Model.Date</dd>
+
+    <dt>@Html.DisplayNameFor(x => x.Explanation)</dt>
+    <dd>@Model.Explanation</dd>
+
+    <dt>@Html.DisplayNameFor(x => x.BlogImage)</dt>
+    <dd>@Model.BlogImage</dd>
+        
+</dl>

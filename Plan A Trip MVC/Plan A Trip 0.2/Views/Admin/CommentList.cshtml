@@ -1,0 +1,28 @@
+﻿@using Plan_A_Trip.Models.Classes
+@model List<Comment_>
+@{
+    ViewBag.Title = "CommentList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Comment List</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Delete</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Comment</th>
+        <th>Blog</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td><a href="/Admin/DeleteComment/@x.Id" class="text-danger" data-toggle="tooltip" data-placement="top" title="Delete"><strong>X</strong></a></td>
+            <td><a href="/Admin/BringComment/@x.Id" class="">@x.UserName</a></td>
+            <td><a href="/Admin/BringComment/@x.Id" class="">@x.Email</a></td>
+            <td><a href="/Admin/BringComment/@x.Id" class="">@x.Comments</a></td>
+            <td><a href="/Admin/BringComment/@x.Id" class="">@x.Blog.Title</a></td>
+        </tr>
+    }
+</table>

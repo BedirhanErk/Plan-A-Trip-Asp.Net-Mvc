@@ -1,0 +1,26 @@
+﻿@model Plan_A_Trip.Models.Classes.User
+@{
+    ViewBag.Title = "BringProfile";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<br />
+<h2>Edit Your Profile</h2>
+<br />
+
+@using (Html.BeginForm("UpdateProfile", "User", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.Id)
+    @Html.TextBoxFor(x=>x.Id, new { @class = "form-control", @readonly = "readonly"})
+    <br />
+    @Html.LabelFor(x=>x.Name)
+    @Html.TextBoxFor(x=>x.Name, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.UserImage)
+    @Html.TextBoxFor(x=>x.UserImage, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Website)
+    @Html.TextBoxFor(x=>x.Website, new { @class = "form-control"})
+    <br />
+    <button class="btn btn-info">Edit</button>
+}

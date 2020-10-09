@@ -1,0 +1,100 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up Plan A Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content=" Astronauts sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script>
+        addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <link href="~/SignUp And Login/css/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/SignUp And Login/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+</head>
+<body>
+    <h1 class="header-w3ls">
+        Sign Up Plan A Trip
+    </h1>
+    <div class="art-bothside">
+        <div class="mid-cls">
+            <div class="art-right-w3ls">
+                <h2>Sign Up Plan A Trip</h2>
+                <p>You can register on our site using this form.</p>
+                <form action="#" method="post">
+                    <div class="main">
+                        <div class="form-left-to-w3l">
+                            <input type="text" name="Name" placeholder="Name" required="">
+                        </div>
+                        <div class="form-right-w3ls">
+                            <input type="email" name="Email" placeholder="Email" required="">
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="form-left-to-w3l">
+                            <input type="password" name="Password" placeholder="Password" id="password" required="">
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-right-w3ls ">
+                            <input type="password" placeholder="Confirm Password" id="confirm_password" required="" name="ConfirmPassword">
+                        </div>
+                    </div>
+                    <div class="btnn">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+                <div class="banner-agileits-btm">
+                    <div class="w3layouts_more-buttn">
+                        <h3>Already have an account..? <a href="/SignUp/Login2" class="">login</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="art-left-w3ls">
+                <img src="~/SignUp And Login/images/right1.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <p>&copy;2020 Sign Up Plan A Trip. All Rights Reserved | Design by <a href="https://www.bedirhanerkilic.com/" target="_blank">Bedirhan Erkılıç</a></p>
+    </div>
+    <script src='~/SignUp And Login/js/jquery-2.2.3.min.js'></script>
+    <script>
+        var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+    <script src="~/SignUp And Login/js/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+        });
+    </script>
+</body>
+</html>
